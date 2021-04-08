@@ -8,28 +8,20 @@ using namespace std;
 #define vi vector<int>
 #define ll long long
 
-int main(){
-    int n, m, k;
-    cin >> n;
-    vi pr;
-    fo(n) {
-        cin >> k;
-        pr.push_back(k);
-    }
-    cin >> m;
-    vi co;
-    fo(m) {
-        cin >> k;
-        co.push_back(k);
-    }
-    fo(m) {
-        int ans=0;
-        for(int j=0; j<n; j++){
-            if(co[i] >= pr[j]){
-                ans++;
-            }
-        }
-        cout <<  ans << endl;
-    }
-    return 0;
+const int MAXN = 1e5;
+int ar [ MAXN ];
+
+int main() {
+	int n;
+	cin >> n;
+	fo(n) cin >> ar [ i ];
+	sort(ar , ar + n);
+	int m;
+	cin >> m;
+	fo(m)
+	{
+		int a;
+		cin >> a;
+		cout <<  upper_bound(ar, ar + n, a) - ar << endl;
+	}	
 }
