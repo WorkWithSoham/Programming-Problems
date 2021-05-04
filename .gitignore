@@ -1,3 +1,4 @@
 # Ignore the cpp executable files
 *.exe
 .vscode
+practice.py
